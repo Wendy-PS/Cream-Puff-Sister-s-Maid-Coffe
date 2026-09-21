@@ -1,0 +1,597 @@
+
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Trava o scroll horizontal */
+    overflow-y: auto;   /* Mantém o scroll vertical */
+}
+
+/* Esse "seletor" serve serve para reescrever propriedades do Bootstrap, assim é possível criar propriedades personalizadas */
+:root {}
+
+/* =====================================================
+   BLOCO DO TOPO: babado + cabeçalho (logo + navbar) + hero
+   Tudo posicionado com % / flex / clamp() em relação ao
+   .hero-wrapper, então nada depende do tamanho do monitor.
+   ===================================================== */
+
+.hero-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+/* Babado (faixa/ribbon) preso no topo, acompanha 100% da largura
+   e mantém a proporção original da imagem em qualquer resolução */
+.babado {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 15;
+    line-height: 0;
+    margin-top: 630px;
+    pointer-events: none !important;
+}
+
+.babado2 {
+    display: block;
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.08));
+}
+
+.hero{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.video-bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.hero-content{
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: white;
+}
+
+/* ===== Cabeçalho: logotipo alinhada com a navbar ===== */
+.site-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 200;
+}
+
+.site-header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: clamp(10px, 2vw, 20px) clamp(16px, 4vw, 56px);
+}
+
+.site-header__logo {
+    display: inline-flex;
+    align-items: center;
+    flex-shrink: 0;
+    line-height: 0;
+}
+
+.logo-img {
+    width: clamp(90px, 11vw, 170px);
+    height: auto;
+    filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.12));
+}
+
+.site-nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.site-nav .navbar-toggler {
+    border: none;
+    background: rgba(255, 255, 255, 0.85);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+}
+
+.site-nav .navbar-toggler:focus {
+    box-shadow: 0 0 0 .2rem rgba(255, 105, 180, .35);
+    outline: none;
+}
+
+/* CSS integrado da nav */
+.nav {
+    gap: clamp(6px, 1.6vw, 30px);
+    padding: 10px clamp(10px, 2vw, 20px);
+    margin: 0;
+    z-index: 9999;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+/* Em telas menores que o breakpoint "lg" a navbar vira um menu
+   suspenso (hamburguer) pra não quebrar o layout */
+@media (max-width: 991.98px) {
+    .site-header__inner {
+        align-items: flex-start;
+    }
+
+    .site-nav {
+        width: 100%;
+        justify-content: flex-end;
+    }
+
+    .site-nav .navbar-collapse {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .site-nav .nav {
+        justify-content: center;
+        background: rgba(255, 255, 255, 0.92);
+        border-radius: 24px;
+        padding: 14px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+}
+
+/* Cor do fundo*/
+.fundo-gradiente-animado {
+    background: linear-gradient(135deg, #ffd1dc 0%, #b3e5fc 100%);
+}
+
+/* Máscara onde eu vou colocar as imagens por cima */
+.mascara-imagem {
+    width: 100%;             
+    max-width: 350px;       
+    aspect-ratio: 1 / 1;  
+    object-fit: cover; 
+    
+    /* efeito de bolhinhaax */
+    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+    transition: all 0.5s ease-in-out;
+    border: 5px solid rgba(255, 255, 255, 0.6);
+}
+
+/* Efeito Hoverzinho */
+.mascara-imagem:hover {
+    border-radius: 50%; 
+    transform: scale(1.05); 
+}
+
+/* Setinhas*/
+.carousel-control-prev,
+.carousel-control-next {
+    width: 10%;
+    z-index: 5;
+    margin: -10px;
+}
+
+/* ===== Sobre Nós: duas colunas responsivas (texto + imagem) ===== */
+.sectionSobre {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(178deg, rgba(242, 183, 124, 1) 0%, rgba(246, 217, 186, 1) 29%);
+    display: flex;
+    align-items: center;
+    padding-top: 90px;
+    padding-bottom: 60px;
+}
+
+.sobre-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: clamp(24px, 5vw, 80px);
+    flex-wrap: wrap;
+}
+
+.sobreNos {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1 1 420px;
+    max-width: 560px;
+}
+
+.sobreNos h1,
+.sobreNos h2 {
+    color: #ff1493;
+}
+
+.descricaoTexto {
+    font-size: clamp(16px, 1.6vw, 20px);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.descricaoTexto p {
+    margin-bottom: 14px;
+}
+
+.instagram {
+    width: 70px;
+    height: 70px;
+    margin-top: 10px;
+}
+
+.redesSociais {
+    display: inline-block;
+    width: auto;
+    height: auto;
+}
+
+.euUs {
+    position: absolute;
+    flex: 1 1 1420px;
+    max-width: 980px;
+    filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.08));
+    margin-left: 500px;
+}
+
+.euUs-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+@media (max-width: 991.98px) {
+    .sobre-wrapper {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .sobreNos {
+        align-items: center;
+        max-width: 100%;
+    }
+
+    .descricaoTexto {
+        align-items: center;
+        text-align: center;
+    }
+}
+
+/* ===== Waves (divisórias decorativas entre sections) =====
+   Full-bleed: 100% da largura da própria section, sem margens
+   negativas fixas, então encaixam certinho em qualquer resolução */
+.wave,
+.wave2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    
+    line-height: 0;
+    pointer-events: none;
+}
+
+.wave svg,
+.wave2 svg {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Sections que têm wave no topo (Serviços e Blog) ganham um respiro
+   extra pra a faixa nunca ficar por cima do título, em qualquer tela */
+.secaoFofa.position-relative {
+    padding-top: clamp(90px, 15vw, 170px);
+}
+
+.video-bg {
+    pointer-events: none !important;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.textoFooter {
+    color: #ff1493;
+}
+
+.footer {
+    position: relative;
+    background: #fda1d2;
+}
+
+.footer-logo-wrap {
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+}
+
+.footer-logo {
+    width: clamp(160px, 22vw, 320px);
+    height: auto;
+    filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.08));
+    margin-right: 1550px;
+    margin-top: 80px;
+    position: absolute;
+}
+
+/* NAVBAR */
+/* Links da navbar */
+/* Altera a cor de todos os textos da navbar para pinnnk */
+.nav-link {
+    color: #ff69b4 !important;
+    font-weight: 600;
+    padding: 10px 15px;
+    transition: 0.3s ease;
+    /* Você pode trocar o código Hex para o tom de rosa que preferir */
+}
+
+/* Hover */
+/* Deixa a cor um pouco mais escura quando passar o mouse por cima (opcional) */
+.nav-link:hover {
+    color: #ff1493 !important;
+    background: transparent !important;
+}
+
+/* Remove o fundo azul do botão "ativo" e aplica a cor rosa no texto */
+/* Remove o fundo rosa do Bootstrap no link ativo */
+/* BOTÃO FAÇA SEU PEDIDO QUERIDANNN */
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+    background-color: #ff1493 !important;
+    color: #ffffff !important;
+    border-radius: 50px !important;
+    padding: 10px 20px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+    transition: 0.3s ease;
+}
+
+/* Hover do botão */
+.nav-pills .nav-link.active:hover {
+    background-color: #ff69b4 !important;
+    color: #ffffff !important;
+    transform: translateY(-2px);
+}
+
+
+botao3 {
+    background:#ff1493;
+    background-color:#ff1493;
+
+
+}
+  /* Fundo fofo padrão pras sections novas (mesma paleta do resto do site, branquinho indo pro bege) */
+        .secaoFofa {
+            background: linear-gradient(180deg, #ffffff 0%, #FCF8F2 45%, #F6EEE4 100%);
+            padding: 80px 0;
+        }
+
+        /* Título das sections novas, copiei o esquema de cor do "Sobre Nós" (aquele rosa marca registrada) */
+        .tituloSecao {
+            color: #ff1493;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 10px;
+            
+        }
+        .tituloSecao h1 {
+            z-index: 88888;
+        }
+
+        .subtituloSecao {
+            text-align: center;
+            color: #6b6b6b;
+            margin-bottom: 50px;
+        }
+
+        /* Botão fofo padrão, mesmo rosa do resto do site (#ff1493) só que reaproveitável em qualquer section */
+        .btn-fofo {
+            background-color: #ff1493;
+            color: #fff !important;
+            border-radius: 50px;
+            border: none;
+            padding: 8px 22px;
+            font-weight: 600;
+            transition: 0.3s ease;
+        }
+
+        .btn-fofo:hover {
+            background-color: #ff69b4;
+            color: #fff !important;
+            transform: translateY(-2px);
+        }
+
+        /* ===== NOSSOS SERVIÇOS ===== */
+        .servicoCard {
+            border: none;
+            border-radius: 30px;
+            background: #ffffff;
+            box-shadow: 0 8px 20px rgba(255, 20, 147, 0.08);
+            transition: 0.3s ease;
+            height: 100%;
+        }
+
+        .servicoCard:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 25px rgba(255, 20, 147, 0.18);
+        }
+
+        .servicoIcone {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #ffd1dc 0%, #b3e5fc 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px auto;
+            font-size: 26px;
+            color: #ff1493;
+        }
+
+        /*  CADASTRO*/
+        .secaoCadastro {
+            background: #db0075;
+background: linear-gradient(178deg, rgba(219, 0, 117, 1) 0%, rgba(255, 20, 147, 1) 29%);
+            padding: 80px 0;
+        }
+
+        .cadastroCard {
+            background: #ffffff;
+            border-radius: 30px;
+            padding: 40px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .cadastroCard .form-label {
+            color: #d6006f;
+            font-weight: 600;
+        }
+
+        .cadastroCard .form-control,
+        .cadastroCard .form-select,
+        .cadastroCard textarea {
+            border-radius: 15px;
+            border: 1px solid #ffd1dc;
+        }
+
+        .cadastroCard .form-control:focus,
+        .cadastroCard .form-select:focus {
+            border-color: #ff69b4;
+            box-shadow: 0 0 0 .2rem rgba(255, 105, 180, .25);
+        }
+
+        /* BLOG*/
+        .blogCard {
+            border: none;
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+            transition: 0.3s ease;
+            height: 100%;
+        }
+
+        .blogCard:hover {
+            transform: translateY(-6px);
+        }
+
+        .blogCard img {
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .blogData {
+            background-color: #ff1493;
+            color: #fff;
+            display: inline-block;
+            padding: 4px 14px;
+            border-radius: 50px;
+            font-size: 13px;
+            font-weight: 600;
+        }
+        /*FALE CONOSCO*/
+        .secaoContato {
+            background: linear-gradient(178deg, #b3e5fc 0%, #e7f6ff 40%, #ffffff 100%);
+            padding: 80px 0;
+        }
+
+        .contatoInfoCard {
+            background: #ffffff;
+            border-radius: 25px;
+            padding: 35px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+            height: 100%;
+        }
+
+        .contatoInfoCard i {
+            color: #ff1493;
+            width: 22px;
+        }
+
+        /* ===== NOSSO ENDEREÇO ===== */
+        .enderecoCard {
+            background: #ffffff;
+            border-radius: 25px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+        }
+
+        .mapaFofo {
+            width: 100%;
+            min-height: 350px;
+            border: 0;
+        }
+        .tituloSecao,
+        .tituloSecaoBlog,
+        .subtituloSecao {
+            z-index: 2;
+            position: relative;
+            margin-bottom: 5px;
+        }
+
+        .tituloSecaoBlog {
+            justify-content: center;
+            text-align: center;
+            margin-bottom: 20px;
+            color:#fda1d2
+            
+        }
+        .espacoNossosServicos, .subtituloSecao   {
+            margin-bottom: 70px;
+        }
+
+        .imageInfo {
+            max-width: 200px;
+            
+        }
+
+    .menu-gradiente {
+    /* Define o gradiente (da esquerda para a direita). Mude as cores como desejar! */
+    background: linear-gradient(90deg, #fffeff 0%, #ffe7fd 100%);
+    
+    /* Dá um espaço interno para os itens não colarem nas bordas */
+    padding: 8px 15px; 
+    
+    /* Garante que o fundo fique bem arredondado (complementa o rounded-5) */
+    border-radius: 50px; 
+    
+    /* Sombra opcional para dar um destaque bonito */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.botaoSubir {
+    position: absolute;
+    top: 560px;
+    left: 1590px;
+    width: 50px;
+    height: 50px;
+    z-index: 1;
+    scroll-behavior: smooth;
+    position: fixed;
+}
+
+.imageBotao {
+    width: 370px;
+     position: absolute;
+}

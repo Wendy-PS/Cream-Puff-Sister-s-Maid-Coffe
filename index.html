@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
+
+    <!--CSS -->
+    <link rel="stylesheet" href="./src/css/style.css">
+
+    <!--JS -->
+    <script src="script.js" defer></script>
+
+    <title>Cream Puff Sister's Maid Coffee</title>
+
+
+</head>
+
+<body>
+
+    <main>
+
+        <!--- Bloco do topo: babado (faixa decorativa) + cabeçalho com logotipo e navbar alinhados, tudo por cima do vídeo do hero --->
+        <div class="hero-wrapper">
+
+            <!--- Babado preso no topo da página, acompanha 100% da largura em qualquer resolução --->
+            <div class="babado" aria-hidden="true">
+                <img src="./src/images/babado2.png" alt="" class="babado2">
+            </div>
+
+            <!--- Cabeçalho: logotipo e navbar na mesma linha, sempre alinhados --->
+            <header class="site-header">
+                <div class="site-header__inner">
+                    <a href="#home" class="site-header__logo">
+                        <img src="./src/images/logotipo2.png" class="logo-img" alt="Cream Puff Sister's Maid Coffee">
+                    </a>
+
+                    <nav class="site-nav navbar navbar-expand-lg ">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false"
+                            aria-label="Abrir menu">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse navColor menu-gradiente" id="navMenu">
+                            <ul class="nav nav-pills rounded-5">
+                                <li class="nav-item"> <a href="#home" class="nav-link">Home</a> </li>
+                                <li class="nav-item"> <a href="#sobre2" class="nav-link">Sobre</a> </li>
+                                <li class="nav-item"> <a href="#produtos" class="nav-link">Produtos</a> </li>
+                                <li class="nav-item"> <a href="#contato" class="nav-link">Contato</a> </li>
+                                <li class="nav-item"> <a href="#endereco" class="nav-link">Endreço</a> </li>
+                                <li class="nav-item"> <a href="#pedido" class="nav-link active rounded-5 me-2">Faça seu Pedido 🤍</a> </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </header>
+
+            <section class="hero position-relative" id="home">
+
+                <video autoplay muted loop playsinline class="video-bg">
+                    <source src="./src/videos/test2.mp4" type="video/mp4">
+                </video>
+
+                <div class="hero-content">
+
+
+
+                </div>
+            </section>
+
+        </div>
+        <!--- Fim do bloco do topo --->
+
+        <!-- Section Sobre Nós -->
+        <section id="sobre2" class="sectionSobre">
+            <div class="container sobre-wrapper">
+
+                <div class="sobreNos">
+                    <h1>🎀 Sobre Nós 🎀</h1>
+                    <h2>Quem Somos?</h2>
+                    <div class="descricaoTexto">
+                        <p>
+                            Cream Puff Sister's Maid Coffee nasceu do desejo de proporcionar uma experiência única,
+                            encantadora e inesquecível para cada pessoa que nos visita.
+                        </p>
+                        <p>
+                            Mais do que uma cafeteria, criamos um ambiente acolhedor, onde cada detalhe é pensado
+                            para tornar o seu momento especial. Nossas maids oferecem um atendimento personalizado,
+                            sempre com simpatia, dedicação e carinho, garantindo que cada cliente se sinta
+                            verdadeiramente bem-vindo.
+                        </p>
+                        <p>Clique no botão abaixo e conheça mais sobre nós!</p>
+                    </div>
+                    <a href="./src/images/redesSociais.jpg" target="_blank" class="redesSociais">
+                        <img src="./src/images/instagram.png" class="instagram" alt="Instagram">
+                    </a>
+                </div>
+
+                <div class="euUs">
+                    <img src="./src/images/aboutUsImage.png" alt="Sobre a Cream Puff Sister's Maid Coffee"
+                        class="euUs-img img-fluid">
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Section Nossos Serviços -->
+        <!-- Section novinha que eu fiz, mostrando os principais lances que a gente oferece aqui no café -->
+        <section id="servicos" class="secaoFofa position-relative overflow-hidden">
+            <div class="wave" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                    <path fill="#F6D9BA" fill-opacity="1"
+                        d="M0,96L17.1,122.7C34.3,149,69,203,103,208C137.1,213,171,171,206,133.3C240,96,274,64,309,42.7C342.9,21,377,11,411,37.3C445.7,64,480,128,514,165.3C548.6,203,583,213,617,192C651.4,171,686,117,720,101.3C754.3,85,789,107,823,101.3C857.1,96,891,64,926,53.3C960,43,994,53,1029,48C1062.9,43,1097,21,1131,10.7C1165.7,0,1200,0,1234,42.7C1268.6,85,1303,171,1337,176C1371.4,181,1406,107,1423,69.3L1440,32L1440,0L1422.9,0C1405.7,0,1371,0,1337,0C1302.9,0,1269,0,1234,0C1200,0,1166,0,1131,0C1097.1,0,1063,0,1029,0C994.3,0,960,0,926,0C891.4,0,857,0,823,0C788.6,0,754,0,720,0C685.7,0,651,0,617,0C582.9,0,549,0,514,0C480,0,446,0,411,0C377.1,0,343,0,309,0C274.3,0,240,0,206,0C171.4,0,137,0,103,0C68.6,0,34,0,17,0L0,0Z">
+                    </path>
+                </svg>
+            </div>
+            <div class="container">
+                <div class="espacoNossosServicos">
+                <h1 class="tituloSecao">🎀 Nossos Serviços 🎀</h1>
+                <p class="subtituloSecao">Tudo que a sua visita na Cream Puff precisa pra ser inesquecível</p>
+                </div>
+
+                <div class="row g-4 justify-content-center">
+
+                    <!-- Serviço 1 -->
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="servicoCard text-center p-4">
+                            <div class="servicoIcone">
+                                <i class="fa-solid fa-mug-hot"></i>
+                            </div>
+                            <h5 class="fw-bold">Atendimento Maid</h5>
+                            <p class="text-muted">Nossas maids te recebem com sorrisos, carinho e toda a energia fofinha do mundo.</p>
+                            <a href="#contato" class="btn btn-fofo">Saiba mais</a>
+                        </div>
+                    </div>
+
+                    <!-- Serviço 2 -->
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="servicoCard text-center p-4">
+                            <div class="servicoIcone">
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <h5 class="fw-bold">Eventos Temáticos</h5>
+                            <p class="text-muted">Cosplay days, encontros e festinhas temáticas o mês inteiro pra deixar tudo mais mágico.</p>
+                            <a href="#contato" class="btn btn-fofo">Saiba mais</a>
+                        </div>
+                    </div>
+
+                    <!-- Serviço 3 -->
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="servicoCard text-center p-4">
+                            <div class="servicoIcone">
+                                <i class="fa-solid fa-gift"></i>
+                            </div>
+                            <h5 class="fw-bold">Celebrações Especiais</h5>
+                            <p class="text-muted">Aniversário e data especial tem faixa, mimo e parabéns cantado pelas maids, queridannn.</p>
+                            <a href="#contato" class="btn btn-fofo">Saiba mais</a>
+                        </div>
+                    </div>
+
+                    <!-- Serviço 4 -->
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="servicoCard text-center p-4">
+                            <div class="servicoIcone">
+                                <i class="fa-solid fa-bag-shopping"></i>
+                            </div>
+                            <h5 class="fw-bold">Take Away</h5>
+                            <p class="text-muted">Leve nossos docinhos e bebidas pra adoçar o seu dia em qualquer lugarzinho.</p>
+                            <a href="#contato" class="btn btn-fofo">Saiba mais</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- Fim da Section Nossos Serviços -->
+
+        <!-- Section Produtos -->
+        <section id="produtos" class="py-5 fundo-gradiente-animado position-relative">
+           
+            <div class="exContainer position-relative">
+
+                <div class="text-center mb-4">
+                    <h2 class="fw-bold text-white">🎀 Destaques do Menu 🎀</h2>
+                </div>
+
+                <!-- Início do Carrossel Bootstrap com controles -->
+                <div id="carroselProdutos" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner text-center">
+
+                     
+                        <!-- Início do Carrossel Bootstrap  -->
+                        <!-- Início do carrossel Bootstrap-->
+                        <div id="carroselProdutos" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner text-center">
+
+                                <!-- SLIDE 1 (Grupo de 3 Produtos) -->
+                                <div class="carousel-item active">
+                                    <!-- Usando a Grid do Bootstrap para alinhar 3 colunas -->
+                                    <div class="row justify-content-center px-4">
+
+                                        <!-- Produto 1 (Esquerda) -->
+                                        <div class="col-12 col-md-4 mb-4">
+                                            <div class="d-flex justify-content-center">
+                                                <img src="./src/images/products/cake.jpg"
+                                                    class="mascara-imagem shadow img-fluid" alt="Bolo">
+                                            </div>
+                                            <div class="mt-4">
+                                                <h4 class="text-white fw-bold">Bolo</h4>
+                                                <p class="text-white">Feita com muito açúcar</p>
+                                            </div>
+                                        </div>
+
+                                        <!-- Produto 2 (Centro) -->
+                                        <div class="col-12 col-md-4 mb-4">
+                                            <div class="d-flex justify-content-center">
+                                                <img src="./src/images/products/cupcake.jpg"
+                                                    class="mascara-imagem shadow img-fluid" alt="Cupcake">
+                                            </div>
+                                            <div class="mt-4">
+                                                <h4 class="text-white fw-bold">Cupcake</h4>
+                                                <p class="text-white">Cupcake Maravilhoso.</p>
+                                            </div>
+                                        </div>
+
+                                        <!-- Produto 3 (Direita) -->
+                                        <div class="col-12 col-md-4 mb-4">
+                                            <div class="d-flex justify-content-center">
+                                                <img src="./src/images/products/donut.jpg"
+                                                    class="mascara-imagem shadow img-fluid" alt="Donut">
+                                            </div>
+                                            <div class="mt-4">
+                                                <h4 class="text-white fw-bold">Donut com cobertura rosa</h4>
+                                                <p class="text-white">Para adoçar o seu dia</p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <!-- SLIDE 2 (Próximo Grupo de Produtos) -->
+                                <div class="carousel-item">
+                                    <div class="row justify-content-center px-4">
+
+                                        <!-- Produto 4 -->
+                                        <div class="col-12 col-md-4 mb-4">
+                                            <div class="d-flex justify-content-center">
+                                                <img src="./src/images/products/macaron.jpg"
+                                                    class="mascara-imagem shadow img-fluid" alt="Macaron">
+                                            </div>
+                                            <div class="mt-4">
+                                                <h4 class="text-white fw-bold">Macaron</h4>
+                                                <p class="text-white">Uma explosão de sabores</p>
+                                            </div>
+                                        </div>
+
+                                        <!-- Produto 3 (Direita) -->
+                                        <div class="col-12 col-md-4 mb-4">
+                                            <div class="d-flex justify-content-center">
+                                                <img src="./src/images/products/donut.jpg"
+                                                    class="mascara-imagem shadow img-fluid" alt="Donut">
+                                            </div>
+                                            <div class="mt-4">
+                                                <h4 class="text-white fw-bold">Donut com cobertura rosa</h4>
+                                                <p class="text-white">Para adoçar o seu dia</p>
+                                            </div>
+                                        </div>
+
+                                        <!-- Produto 1 (Esquerda) -->
+                                        <div class="col-12 col-md-4 mb-4">
+                                            <div class="d-flex justify-content-center">
+                                                <img src="./src/images/products/cake.jpg"
+                                                    class="mascara-imagem shadow img-fluid" alt="Bolo">
+                                            </div>
+                                            <div class="mt-4">
+                                                <h4 class="text-white fw-bold">Bolo</h4>
+                                                <p class="text-white">Feita com muito açúcar</p>
+                                            </div>
+                                        </div>
+                                        <!-- Adicione mais duas divs (col-12 col-md-4) aqui para completar o trio do segundo slide, se quiser -->
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <!-- Setas para controlar -->
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carroselProdutos"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon p-3 rounded-circle bg-white bg-opacity-25"
+                                    aria-hidden="true"></span>
+                                <span class="visually-hidden">Anterior</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carroselProdutos"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon p-3 rounded-circle bg-white bg-opacity-25"
+                                    aria-hidden="true"></span>
+                                <span class="visually-hidden">Próximo</span>
+                            </button>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Cadastro -->
+        <!-- Reformulei ela inteira: os ids tavam td repetido, tinha divs que nem fechavam direito, um caos -->
+        <section id="pedido" class="secaoCadastro position-relative">
+            
+                <div class="row justify-content-center">
+                    <div class="col-lg-9">
+                        <div class="cadastroCard">
+
+                            <div class="text-center mb-4">
+                                <h1 class="tituloSecao mb-2">🎀 Cadastro de Clientes 🎀</h1>
+                                <p class="subtituloSecao mb-0">Faça parte da nossa família fofinha e garanta atendimento prioritário nas suas visitas!</p>
+                            </div>
+
+                            <form>
+
+                                <!-- Nome e Data de Nascimento -->
+                                <div class="row mb-3">
+                                    <div class="col-md-8 mb-3 mb-md-0">
+                                        <label class="form-label" for="cadastroNome">Nome completo:</label>
+                                        <input type="text" id="cadastroNome" class="form-control" placeholder="Como podemos te chamar?" required>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label class="form-label" for="cadastroNascimento">Data de nascimento:</label>
+                                        <input type="date" id="cadastroNascimento" class="form-control">
+                                    </div>
+                                </div>
+
+                                <!-- WhatsApp e Email -->
+                                <div class="row mb-3">
+                                    <div class="col-md-6 mb-3 mb-md-0">
+                                        <label class="form-label" for="cadastroZap">WhatsApp:</label>
+                                        <input type="text" id="cadastroZap" class="form-control" placeholder="(00) 00000-0000">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label" for="cadastroEmail">E-mail:</label>
+                                        <input type="email" id="cadastroEmail" class="form-control" placeholder="seuemail@email.com" required>
+                                    </div>
+                                </div>
+
+                                <!-- Endereço -->
+                                <div class="mb-3">
+                                    <label class="form-label" for="cadastroEndereco">Endereço completo:</label>
+                                    <input type="text" id="cadastroEndereco" class="form-control" placeholder="Rua, número, bairro, cidade">
+                                </div>
+
+                                <!-- Personalidade da Maid e Forma de pagamento -->
+                                <div class="row mb-3">
+                                    <div class="col-md-6 mb-3 mb-md-0">
+                                        <label class="form-label" for="cadastroPersonalidade">Personalidade da Maid preferida:</label>
+                                        <select id="cadastroPersonalidade" class="form-select">
+                                            <option value="" selected disabled>Selecione a personalidade da sua maid</option>
+                                            <option value="tsundere">Tsundere</option>
+                                            <option value="loli">Loli</option>
+                                            <option value="yandere">Yandere</option>
+                                            <option value="gyaru">Gyaru</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label" for="cadastroPagamento">Forma de pagamento:</label>
+                                        <select id="cadastroPagamento" class="form-select">
+                                            <option value="" selected disabled>Selecione uma forma de pagamento</option>
+                                            <option value="pix">Pix</option>
+                                            <option value="cartao">Cartão</option>
+                                            <option value="ticket">Ticket Alimentação</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <!-- Restrições Alimentares -->
+                                <div class="mb-3">
+                                    <label class="form-label" for="cadastroRestricao">Restrições alimentares:</label>
+                                    <textarea class="form-control" id="cadastroRestricao" rows="3" placeholder="Alergias, intolerâncias ou qualquer coisa que a gente precise saber"></textarea>
+                                </div>
+
+                                <!-- Checkboxes -->
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" value="" id="cadastroNovidades" checked>
+                                    <label class="form-check-label" for="cadastroNovidades">
+                                        Aceito receber novidades e promoções por e-mail/WhatsApp
+                                    </label>
+                                </div>
+                                <div class="form-check mb-4">
+                                    <input class="form-check-input" type="checkbox" value="" id="cadastroAgendar">
+                                    <label class="form-check-label" for="cadastroAgendar">
+                                        Quero agendar um atendimento
+                                    </label>
+                                </div>
+
+                                <!-- agendar -->
+                                <div class="text-center">
+                                    <button type="button" class="btn btn-fofo px-5 py-2">Cadastrar 🤍</button>
+                                </div>
+
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <!-- Fim da Section Cadastro -->
+
+        <!-- Section Blog / Novidades -->
+        <!-- Deixei preparada pra eu ir postando as novidades do café aqui depois -->
+        <section id="blog" class="secaoFofa position-relative overflow-hidden">
+            <div class="wave2" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#FF1493" fill-opacity="1" d="M0,32L26.7,37.3C53.3,43,107,53,160,80C213.3,107,267,149,320,149.3C373.3,149,427,107,480,74.7C533.3,43,587,21,640,53.3C693.3,85,747,171,800,208C853.3,245,907,235,960,229.3C1013.3,224,1067,224,1120,234.7C1173.3,245,1227,267,1280,261.3C1333.3,256,1387,224,1413,208L1440,192L1440,0L1413.3,0C1386.7,0,1333,0,1280,0C1226.7,0,1173,0,1120,0C1066.7,0,1013,0,960,0C906.7,0,853,0,800,0C746.7,0,693,0,640,0C586.7,0,533,0,480,0C426.7,0,373,0,320,0C266.7,0,213,0,160,0C106.7,0,53,0,27,0L0,0Z"></path></svg>
+            </div>
+            <div class="container">
+                <h1 class="tituloSecaoBlog">🎀 Blog / Novidades 🎀</h1>
+                <p class="subtituloSecao">Fique por dentro de tudo que rola por aqui</p>
+
+                <div class="row g-4">
+
+                    <!-- Post 1 -->
+                    <div class="col-12 col-md-4">
+                        <div class="blogCard bg-white">
+                            <img src="./src/images/products/cake.jpg" class="w-100" alt="Cardápio de primavera">
+                            <div class="p-4">
+                                <span class="blogData">10 Mar</span>
+                                <h5 class="fw-bold mt-3">Nosso novo cardápio de primavera chegou! 🌸</h5>
+                                <p class="text-muted">Novos sabores e bebidas floridas chegaram pra alegrar ainda mais a sua visita.</p>
+                                <a href="#" class="fw-bold text-decoration-none" style="color:#ff1493;">Leia mais →</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Post 2 -->
+                    <div class="col-12 col-md-4">
+                        <div class="blogCard bg-white">
+                            <img src="./src/images/products/cupcake.jpg" class="w-100" alt="Bastidores do café">
+                            <div class="p-4">
+                                <span class="blogData">25 Fev</span>
+                                <h5 class="fw-bold mt-3">Bastidores do Café: um dia com as maids 💕</h5>
+                                <p class="text-muted">Veja como é a rotina por trás do balcão e como preparamos cada docinho com carinho.</p>
+                                <a href="#" class="fw-bold text-decoration-none" style="color:#ff1493;">Leia mais →</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Post 3 -->
+                    <div class="col-12 col-md-4">
+                        <div class="blogCard bg-white">
+                            <img src="./src/images/products/donut.jpg" class="w-100" alt="Dicas de etiqueta">
+                            <div class="p-4">
+                                <span class="blogData">12 Jan</span>
+                                <h5 class="fw-bold mt-3">Dicas de etiqueta para aproveitar o Maid Café 🎀</h5>
+                                <p class="text-muted">Separamos algumas dicas fofas pra você aproveitar sua experiência do jeitinho certo.</p>
+                                <a href="#" class="fw-bold text-decoration-none" style="color:#ff1493;">Leia mais →</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- Fim da Section Blog -->
+
+        <!-- Section Fale Conosco -->
+        <!-- Aqui é o #contato que o botão "Contato" do menu tava esperando hehe, agora o link funciona -->
+        <section id="contato" class="secaoContato">
+            <div class="container">
+                <h1 class="tituloSecao">🎀 Fale Conosco 🎀</h1>
+                <p class="subtituloSecao">Dúvidas, sugestões ou só quer mandar um oi? Manda pra gente!</p>
+
+                <div class="row g-4">
+
+                    <!-- Formulário -->
+                    <div class="col-lg-8">
+                        <div class="contatoInfoCard">
+                            <form>
+                                <div class="row mb-3">
+                                    <div class="col-md-6 mb-3 mb-md-0">
+                                        <label class="form-label" for="contatoNome">Nome:</label>
+                                        <input type="text" id="contatoNome" class="form-control" placeholder="Seu nome completo">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label" for="contatoEmail">E-mail:</label>
+                                        <input type="email" id="contatoEmail" class="form-control" placeholder="seuemail@email.com">
+                                    </div>
+                                </div>
+
+                                <div class="row mb-3">
+                                    <div class="col-md-6 mb-3 mb-md-0">
+                                        <label class="form-label" for="contatoTelefone">Telefone:</label>
+                                        <input type="text" id="contatoTelefone" class="form-control" placeholder="(00) 00000-0000">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label" for="contatoAssunto">Assunto:</label>
+                                        <select id="contatoAssunto" class="form-select">
+                                            <option value="" selected disabled>Selecione um assunto</option>
+                                            <option value="duvida">Dúvida</option>
+                                            <option value="evento">Evento / Reserva</option>
+                                            <option value="parceria">Parceria</option>
+                                            <option value="outro">Outro</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <!-- Como prefere ser contatado -->
+                                <div class="mb-3">
+                                    <label class="form-label d-block">Como prefere ser contatado?</label>
+                                    <div class="d-flex gap-4 flex-wrap">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="contatoPreferencia" id="prefEmail" checked>
+                                            <label class="form-check-label" for="prefEmail">E-mail</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="contatoPreferencia" id="prefTelefone">
+                                            <label class="form-check-label" for="prefTelefone">Telefone</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="contatoPreferencia" id="prefWhats">
+                                            <label class="form-check-label" for="prefWhats">WhatsApp</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mb-4">
+                                    <label class="form-label" for="contatoMensagem">Mensagem:</label>
+                                    <textarea class="form-control" id="contatoMensagem" rows="4" placeholder="Escreva sua mensagem aqui..."></textarea>
+                                </div>
+
+                                <button type="button" class="btn btn-fofo px-5 py-2">Enviar Mensagem 💌</button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Outras formas de contato -->
+                    <div class="col-lg-4">
+                        <div class="contatoInfoCard">
+                            <h5 class="fw-bold mb-4" style="color:#ff1493;">Outras formas de contato</h5>
+                            <p class="mb-3"><i class="fas fa-envelope me-2"></i>CreamPuff22@gmail.com</p>
+                            <p class="mb-3"><i class="fab fa-instagram me-2"></i>@creampuffsistersmaidcoffee</p>
+                            <p class="mb-3"><i class="fas fa-phone me-2"></i>(11) 91234-5678</p>
+                            <p class="mb-0"><i class="fas fa-clock me-2"></i>Terça a Domingo, 12h às 21h</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- Fim da Section Fale Conosco -->
+
+        <!-- Section Nosso Endereço -->
+        <section id="endereco" class="secaoFofa">
+            <div class="container">
+                <h1 class="tituloSecao">🎀 Nosso Endereço 🎀</h1>
+                <p class="subtituloSecao">Vem nos fazer uma visitinha!</p>
+
+                <div class="enderecoCard row g-0">
+
+                    <!-- Infos -->
+                    <div class="col-lg-4 p-4 d-flex flex-column justify-content-center">
+                        <img src="./src/images/logotipo.png" class="img-fluid mb-3" style="max-width: 200px;" alt="Cream Puff Sister's Maid Coffee">
+                        <h5 class="fw-bold">Cream Puff Sister's Maid Coffee</h5>
+                        <p class="text-muted">
+                            Rua Docinho de Morango, 123<br>
+                            Bairro Mikan Tsumiki Danganronpa<br>
+                            São Paulo - SP, CEP 04567-666
+                        </p>
+                        <!-- Endereço fictício, viu? Quando tiver o endereço de verdade é só trocar aqui embaixo e no link do mapa -->
+                        <a href="https://www.google.com/maps/search/?api=1&query=Rua+Docinho+de+Morango+123+São+Paulo+SP"
+                            target="_blank" class="btn btn-fofo align-self-start">
+                            <i class="fas fa-location-arrow me-2"></i>Como chegar
+                        </a>
+                    </div>
+
+                    <!-- Mapa (embed do Google Maps, sem precisar de API key) -->
+                    <div class="col-lg-8">
+                        <iframe
+                            class="mapaFofo"
+                            src="https://www.google.com/maps?q=Rua+Docinho+de+Morango+123+São+Paulo+SP&output=embed"
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- Fim da Section Nosso Endereço -->
+
+        <!-- Footer -->
+        <footer class="text-center text-lg-start footer text-muted position-relative">
+            <div class="footer-logo-wrap">
+                <img src="./src/images/logotipo3.png" alt="Cream Puff Sister's Maid Coffee" class="footer-logo img-fluid">
+            </div>
+            <!-- Section: Social media -->
+            <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+                <!-- Left -->
+                <div class="me-5 d-none d-lg-block">
+
+                </div>
+                <!-- Left -->
+
+                <!-- Right -->
+                <div>
+                    <a href="./src/images/redesSociais.jpg" target="_blank" class="me-4 text-reset">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="./src/images/redesSociais.jpg" target="_blank" class="me-4 text-reset">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="./src/images/redesSociais.jpg" target="_blank" class="me-4 text-reset">
+                        <i class="fab fa-google"></i>
+                    </a>
+                    <a href="./src/images/redesSociais.jpg" target="_blank" class="me-4 text-reset">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="./src/images/redesSociais.jpg" target="_blank" class="me-4 text-reset">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="./src/images/redesSociais.jpg" target="_blank" class="me-4 text-reset">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+                <!-- Right -->
+            </section>
+            <!-- Section: Social media -->
+
+            <!-- Section: Links  -->
+            <section class="linkszinho">
+                <div class="container text-center text-md-start mt-5">
+                    <!-- Grid row -->
+                    <div class="row mt-3">
+                        <!-- Grid column -->
+                        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                            <!-- Conteúdooo -->
+                            <h6 class="text-uppercase textoFooter fw-bold mb-4">
+                                <i class="fa me-6  "></i>Cream Puff Sister's Maid Coffee
+                            </h6>
+                            <p>
+                                Rua Docinho de Morango, 123 - Bairro Mikan Tsumiki Dangaronpa - DR - CEP 666
+                            </p>
+                        </div>
+                        <!-- Grid column -->
+
+                        <!-- Grid column -->
+                        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                            <!-- Links -->
+                            <h6 class="text-uppercase textoFooter fw-bold mb-4">
+                                Navegção
+                            </h6>
+                            <p>
+                                <a href="#!" class="text-reset">Home</a>
+                            </p>
+                            <p>
+                                <a href="#!" class="text-reset">Sobre</a>
+                            </p>
+                            <p>
+                                <a href="#!" class="text-reset">Produtos</a>
+                            </p>
+                            <p>MDBootstrap.com
+                                <a href="#!" class="text-reset">Contato</a>
+                            </p>
+                        </div>
+                        <!-- Grid column -->
+
+                        <!-- Grid column -->
+                        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                            <!-- Links -->
+                            <h6 class="text-uppercase textoFooter fw-bold mb-4">Contato</h6>
+                            <p><i class="fas fa-home me-3"></i> São Paulo, SP</p>
+                            <p>
+                                <i class="fas fa-envelope me-3"></i>
+                                CreamPuff22@gmail.com
+                            </p>
+                            <p><i class="fas fa-phone me-3"></i> +(eu não sei o ddd de SP) 231312039821</p>
+                            <p><i class="fas fa-print me-3"></i> +(eu não sei o ddd de SP) 2313124535921</p>
+                        </div>
+                        <!-- Grid column -->
+                    </div>
+                    <!-- Grid row -->
+                </div>
+            </section>
+            <!-- Section: Links  -->
+
+            <!-- Copyright -->
+            <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+                © 2026 Copyright:
+                <a class="text-reset fw-bold" href="./src/images/redesSociais.jpg">Cream Puff Sister's Maid Coffe</a>
+            </div>
+            <!-- Copyright  -->
+        </footer>
+        <!-- Footer -->
+
+<!-- Botão para voltar a página -->
+ 
+<div class="botaoSubir">
+<a href="#home" class="botaoSubir">
+    <img src="./src/images/BotãoSubir.png" class="imageBotao" alt="Botão de Subir">
+</a
+</div>
+
+
+        <!-- CDN MDB5 UIiiii-->
+        <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/9.3.0/mdb.umd.min.js"></script>
+
+        <!--- CDN do boostrap --->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+            crossorigin="anonymous"></script>
+    </main>
+</body>
+
+</html>
