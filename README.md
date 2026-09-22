@@ -7,7 +7,7 @@ O projeto foi construído com o intuito de testar meus conhecimentos mediante a 
 ---
 
 ## 💻 Visualização
-🔗 [**[Clique aqui para acessar a Landing Page](https://wendy-ps.github.io/maid-cafe-landing-page/)**]
+🔗 [**[Clique aqui para acessar a Landing Page](https://wendy-ps.github.io/Cream-Puff-Sister-s-Maid-Coffe/)**]
 
 ## ✨ Funcionalidades (Features)
 - 🎨 **Design Temático:** Identidade visual inspirada na cultura dos Maid Cafés.
